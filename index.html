@@ -552,7 +552,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    cursor: none;
+	cursor: pointer;
     transition: background 0.3s;
     margin-top: 8px;
   }
@@ -981,31 +981,51 @@
     </div>
   </div>
   <div class="contact-right reveal">
-    <div class="form-group">
-      <label>Your name</label>
-      <input type="text" placeholder="e.g. Sophie Laurent">
-    </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" placeholder="hello@studio.com">
-    </div>
-    <div class="form-group">
-      <label>Project type</label>
-      <select>
-        <option value="">Select a service</option>
-        <option>Interior Visualization</option>
-        <option>Exterior & Architecture</option>
-        <option>Product Photography</option>
-        <option>3D Animation</option>
-        <option>Other</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Tell me about your project</label>
-      <textarea placeholder="A brief overview..."></textarea>
-    </div>
-    <a href="mailto:annakriuk13@gmail.com" class="btn-submit">Send Message</a>
-  </div>
+
+  <form action="https://formsubmit.co/annakriuk13@gmail.com" method="POST">
+
+```
+<div class="form-group">
+  <label>Your name</label>
+  <input type="text" name="name" placeholder="e.g. Sophie Laurent" required>
+</div>
+
+<div class="form-group">
+  <label>Email</label>
+  <input type="email" name="email" placeholder="hello@studio.com" required>
+</div>
+
+<div class="form-group">
+  <label>Project type</label>
+  <select name="project">
+    <option value="">Select a service</option>
+    <option>Interior Visualization</option>
+    <option>Exterior & Architecture</option>
+    <option>Product Photography</option>
+    <option>3D Animation</option>
+    <option>Other</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label>Tell me about your project</label>
+  <textarea name="message" placeholder="A brief overview..." required></textarea>
+</div>
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden"
+       name="_next"
+       value="https://annakriuk13.github.io/my-portfolio/">
+
+<button type="submit" class="btn-submit">
+  Send Message
+</button>
+
+  </form>
+
+</div>
+
 </section>
 
 <!-- Footer -->
